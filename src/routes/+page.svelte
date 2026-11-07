@@ -29,18 +29,24 @@
   .projects {
     display: grid;
     width: fit-content;
-    gap: 1.5rem;
-    grid-template-columns: repeat(5, auto);
+    gap: 1.5em;
+    grid-template-columns: repeat(
+      round(down, calc((100vw - 20em) / (1.5em + 17em))),
+      auto
+    );
+
+    /* padding-left: 10em;
+    padding-right: 10em; */
 
     margin-left: auto;
     margin-right: auto;
 
     position: relative;
-    top: 15rem;
+    top: 15em;
   }
 
   .intro {
-    margin-top: 3rem;
+    margin-top: 3em;
     text-align: center;
   }
 </style>

@@ -10,16 +10,16 @@
 <style>
   .project {
     background-color: lightgray;
-    padding: 1rem;
-    height: 21rem;
-    width: 17rem;
+    padding: 1em;
+    height: 21em;
+    width: 17em;
   }
 
   .project > h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
 
     border-bottom: 1px solid gray;
   }
