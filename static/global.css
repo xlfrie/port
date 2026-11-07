@@ -6,6 +6,6 @@ body {
 
 @media screen and (min-width: 600px) {
     body {
-        font-size: calc(15px + 0.390625vw);
+        font-size: 1.1vw
     }
 }

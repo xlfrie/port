@@ -26,17 +26,15 @@
 </div>
 
 <style>
+  :root {
+    --grid-amount: 4;
+  }
+
   .projects {
     display: grid;
     width: fit-content;
     gap: 1.5em;
-    grid-template-columns: repeat(
-      round(down, calc((100vw - 20em) / (1.5em + 17em))),
-      auto
-    );
-
-    /* padding-left: 10em;
-    padding-right: 10em; */
+    grid-template-columns: repeat(var(--grid-amount), auto);
 
     margin-left: auto;
     margin-right: auto;
