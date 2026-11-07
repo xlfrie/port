@@ -36,6 +36,11 @@
     margin-right: auto;
 
     position: relative;
-    top: 10rem;
+    top: 15rem;
+  }
+
+  .intro {
+    margin-top: 3rem;
+    text-align: center;
   }
 </style>

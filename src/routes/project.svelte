@@ -11,8 +11,8 @@
   .project {
     background-color: lightgray;
     padding: 1rem;
-    height: 14rem;
-    width: 10rem;
+    height: 21rem;
+    width: 17rem;
   }
 
   .project > h3 {
