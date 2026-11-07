@@ -11,17 +11,29 @@
   <Project name="Megaviir" description="hello world" />
   <Project name="Swerve Drive Software" description="hello world" />
   <Project name="Trithium" description="hello world" />
+
+  <Project name="Megaviir" description="hello world" />
+  <Project name="Swerve Drive Software" description="hello world" />
+  <Project name="Trithium" description="hello world" />
+
+  <Project name="Megaviir" description="hello world" />
+  <Project name="Swerve Drive Software" description="hello world" />
+  <Project name="Trithium" description="hello world" />
+
+  <Project name="Megaviir" description="hello world" />
+  <Project name="Swerve Drive Software" description="hello world" />
+  <Project name="Trithium" description="hello world" />
 </div>
 
 <style>
   .projects {
     display: grid;
+    width: fit-content;
     gap: 1.5rem;
-    flex: 1;
+    grid-template-columns: repeat(5, auto);
 
     margin-left: auto;
     margin-right: auto;
-    width: max-content;
 
     position: relative;
     top: 10rem;
