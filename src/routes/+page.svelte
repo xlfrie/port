@@ -3,8 +3,13 @@
 </script>
 
 <div class="intro">
-  <h2>Hello</h2>
-  <p>I'm XLFrie, and I like to make things (sometimes)</p>
+  <div class="intro-beginning">
+    <h2>Hello</h2>
+    <h3>I'm XLFrie</h3>
+    <p class="subtext">And I like to make things <i>(sometimes)</i></p>
+  </div>
+  <br>
+  <p></p>
 </div>
 
 <div class="projects">
@@ -44,7 +49,45 @@
   }
 
   .intro {
-    margin-top: 3em;
+    position: relative;
+    top:0;
+
     text-align: center;
+    height: calc(100vh - 4.3em);
+
+    background-color: salmon;
+  }
+
+  i {
+    font-style: italic;
+  }
+
+  /* TODO make look like macintosh hello + animation (whoa) */
+  h2 {
+    font-size: 4em;
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .intro-beginning {
+    top:0;
+    padding-top: 3em;
+  }
+
+  .intro-beginning > h3 {
+    margin-top: 1em;
+  }
+
+  .intro-beginning > p {
+    margin-top: 2.5em;
+  }
+
+  .subtext {
+    color: gray;
+    font-weight: lighter;
   }
 </style>
