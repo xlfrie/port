@@ -1,28 +1,29 @@
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.3.0/index.css');
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.3.0/index.css");
 
 body {
-    font-family: 'Poppins', sans-serif;
-    overflow: overlay;
+  font-family: "Poppins", sans-serif;
+
+  scroll-margin-top: 4.3em;
 }
 
 @media screen and (min-width: 600px) {
-    body {
-        font-size: 1.1vw
-    }
+  body {
+    font-size: 1.1vw;
+  }
 }
 
-body::-webkit-scrollbar {
-    width: .5em;
-    position: absolute;
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
 }
 
-body::-webkit-scrollbar-track {
-    background-color: blue;
-    /* position: absolute; */
-    top:5em
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 95%);
+  top: 5em;
+  height: 10em;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: .75em;
-    background-color: gray;
+  border-radius: 0.75em;
+  background-color: hsl(0, 0%, 75%);
 }
