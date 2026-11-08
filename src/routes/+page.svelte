@@ -1,5 +1,5 @@
 <script>
-  import Project from "./project.svelte";
+  import Project from "../lib/project.svelte";
 </script>
 
 <div class="intro">
@@ -8,7 +8,7 @@
     <h3>I'm XLFrie</h3>
     <p class="subtext">And I like to make things <i>(sometimes)</i></p>
   </div>
-  <br>
+  <br />
   <p></p>
 </div>
 
@@ -50,7 +50,7 @@
 
   .intro {
     position: relative;
-    top:0;
+    top: 0;
 
     text-align: center;
     height: calc(100vh - 4.3em);
@@ -74,7 +74,7 @@
   }
 
   .intro-beginning {
-    top:0;
+    top: 0;
     padding-top: 3em;
   }
 
