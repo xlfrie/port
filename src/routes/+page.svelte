@@ -1,13 +1,16 @@
 <script>
   import DownArrow from "#lib/downArrow.svelte";
+  import { browser } from "$app/env";
   import Project from "../lib/project.svelte";
 
   let scroll = $state(0);
 
-  addEventListener("scroll", (event) => {
-    scroll = window.scrollY;
-  });
+  let opacity = $derived(
+    browser ? (innerHeight * 0.5 - scroll) / (innerHeight * 0.5) : 0,
+  );
 </script>
+
+<svelte:window bind:scrollY={scroll} />
 
 <div class="intro">
   <div class="intro-beginning">
@@ -15,10 +18,7 @@
     <h3>I'm XLFrie</h3>
     <p class="subtext">And I like to make things <i>(sometimes)</i></p>
 
-    <DownArrow
-      opacity={(window.innerHeight * 0.5 - scroll) / (window.innerHeight * 0.5)}
-      class="intro-arrow"
-    />
+    <DownArrow class="intro-arrow" {opacity} />
   </div>
   <br />
   <p></p>
