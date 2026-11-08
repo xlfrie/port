@@ -1,8 +1,8 @@
 <script>
-  let { class: propsClass = "", opacity = 1 } = $props();
+  let { class: propsClass = "", opacity = 1, style = "" } = $props();
 </script>
 
-<div class="arrows {propsClass}" style="opacity: {opacity};">
+<div class="arrows {propsClass}" style="opacity: {opacity}; {style}">
   <span class="downArrow1 arrow">
     <div class="left-angle angle"></div>
     <div class="right-angle angle"></div>

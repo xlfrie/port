@@ -5,9 +5,9 @@
 
   let scroll = $state(0);
 
-  let opacity = $derived(
-    browser ? (innerHeight * 0.5 - scroll) / (innerHeight * 0.5) : 0,
-  );
+  let opacity = $derived((innerHeight * 0.5 - scroll) / (innerHeight * 0.5));
+
+  let scale = $derived(1 / opacity);
 </script>
 
 <svelte:window bind:scrollY={scroll} />
@@ -18,7 +18,7 @@
     <h3>I'm XLFrie</h3>
     <p class="subtext">And I like to make things <i>(sometimes)</i></p>
 
-    <DownArrow class="intro-arrow" {opacity} />
+    <DownArrow class="intro-arrow" {opacity} style="scale: {0.65 * scale}" />
   </div>
   <br />
   <p></p>
