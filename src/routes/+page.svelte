@@ -1,5 +1,12 @@
 <script>
+  import DownArrow from "#lib/downArrow.svelte";
   import Project from "../lib/project.svelte";
+
+  let scroll = $state(0);
+
+  addEventListener("scroll", (event) => {
+    scroll = window.scrollY;
+  });
 </script>
 
 <div class="intro">
@@ -7,6 +14,11 @@
     <h2>Hello</h2>
     <h3>I'm XLFrie</h3>
     <p class="subtext">And I like to make things <i>(sometimes)</i></p>
+
+    <DownArrow
+      opacity={(window.innerHeight * 0.5 - scroll) / (window.innerHeight * 0.5)}
+      class="intro-arrow"
+    />
   </div>
   <br />
   <p></p>
@@ -84,6 +96,14 @@
 
   .intro-beginning > p {
     margin-top: 2.5em;
+  }
+
+  :global(.intro-arrow) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    bottom: 1.5em;
   }
 
   .subtext {
