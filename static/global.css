@@ -2,10 +2,27 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow: overlay;
 }
 
 @media screen and (min-width: 600px) {
     body {
         font-size: 1.1vw
     }
+}
+
+body::-webkit-scrollbar {
+    width: .5em;
+    position: absolute;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: blue;
+    /* position: absolute; */
+    top:5em
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .75em;
+    background-color: gray;
 }
