@@ -2,6 +2,7 @@
   import favicon from "#lib/assets/favicon.svg";
   import type { LayoutProps } from "./$types";
   import Navbar from "../lib/navbar.svelte";
+  import Footer from "#lib/footer.svelte";
 
   let { children }: LayoutProps = $props();
 </script>
@@ -17,3 +18,4 @@
 
 <Navbar />
 {@render children()}
+<Footer />

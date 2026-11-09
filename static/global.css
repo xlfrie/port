@@ -4,6 +4,13 @@ body {
   font-family: "Poppins", sans-serif;
 
   scroll-margin-top: 4.3em;
+
+  --primary-color: #9fb3df;
+  --secondary-color: #9ec6f3;
+  --tertiary-color: #bddde4;
+  --accent-color: #fff1d5;
+
+  --soft-black: hsl(0 0 15% / 1);
 }
 
 @media screen and (min-width: 600px) {

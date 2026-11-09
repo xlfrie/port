@@ -11,7 +11,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    background-color: lightblue;
+    background-color: var(--secondary-color);
   }
 
   .navbar > p {
@@ -29,5 +29,7 @@
     margin-top: auto;
     font-size: 2.3em;
     font-weight: 600;
+
+    color: var(--soft-black);
   }
 </style>

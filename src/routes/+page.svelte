@@ -9,6 +9,7 @@
   let scrollPercent = $derived(
     (innerHeight * 0.3 - scroll) / (innerHeight * 0.3),
   );
+  let introAngle = $derived((1 - scrollPercent) * 80 + 20);
   let opacity = $derived(hasScrolledDown ? 0 : scrollPercent);
 
   $effect(() => {
@@ -23,7 +24,10 @@
 <svelte:window bind:scrollY={scroll} bind:innerHeight />
 
 <div class="intro">
-  <div class="intro-beginning">
+  <div
+    class="intro-beginning"
+    style="background-image: linear-gradient({introAngle}deg, var(--tertiary-color), var(--accent-color));"
+  >
     <h2 class="hello">Hello</h2>
     <h3>I'm XLFrie</h3>
     <p class="subtext">And I like to make things <i>(sometimes)</i></p>
@@ -145,8 +149,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    position: relative;
-    top: 15em;
+    margin-top: 15em;
   }
 
   .intro {
@@ -183,7 +186,7 @@
   }
 
   .intro-beginning > h2 {
-    padding-top: 1em;
+    padding-top: 3em;
   }
 
   .intro-beginning > h3 {
