@@ -1,16 +1,26 @@
 <script>
   import DownArrow from "#lib/downArrow.svelte";
-  import { browser } from "$app/env";
   import Project from "../lib/project.svelte";
 
   let scroll = $state(0);
+  let innerHeight = $state(0);
+  let hasScrolledDown = false;
 
-  let opacity = $derived((innerHeight * 0.5 - scroll) / (innerHeight * 0.5));
+  let scrollPercent = $derived(
+    (innerHeight * 0.3 - scroll) / (innerHeight * 0.3),
+  );
+  let opacity = $derived(hasScrolledDown ? 0 : scrollPercent);
 
-  let scale = $derived(1 / opacity);
+  $effect(() => {
+    if (scrollPercent <= 0) {
+      hasScrolledDown = true;
+    }
+  });
+
+  let scale = $derived(1 / scrollPercent);
 </script>
 
-<svelte:window bind:scrollY={scroll} />
+<svelte:window bind:scrollY={scroll} bind:innerHeight />
 
 <div class="intro">
   <div class="intro-beginning">
