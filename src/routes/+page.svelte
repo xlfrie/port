@@ -115,7 +115,6 @@
     font-family: "Macintosh";
 
     font-style: normal;
-    display: swap;
     font-weight: 300;
 
     src: url("src/lib/assets/MacintoshSkeletalVariable.otf") format("opentype");
