@@ -13,10 +13,4 @@ export default defineConfig({
       adapter: adapter(),
     }),
   ],
-  server: {
-    https: {
-      key: `${__dirname}/../cert/key.PEM`,
-      cert: `${__dirname}/../cert/cert.PEM`,
-    },
-  },
 });
