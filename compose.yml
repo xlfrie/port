@@ -6,3 +6,4 @@ services:
     environment:
       - ORIGIN=http://localhost:3000
     init: true
+    restart: always
