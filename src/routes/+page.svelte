@@ -75,7 +75,7 @@
     font-style: normal;
     font-weight: 300;
 
-    src: url("src/lib/assets/MacintoshSkeletalVariable.otf") format("opentype");
+    src: url("/assets/MacintoshSkeletalVariable.otf") format("opentype");
   }
 
   @keyframes draw {

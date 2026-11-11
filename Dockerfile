@@ -14,6 +14,7 @@ ENV NODE_ENV=production
 
 COPY --from=build /app/build ./build
 COPY --from=build /app/package.json /app/package-lock.json ./
+RUN npm ci --omit=dev
 
 USER node
 EXPOSE 3000
